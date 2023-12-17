@@ -1,2 +1,2 @@
-./server/credentials.json
-./web/credentials.json
+web/credentials.json
+server/credentials.json
