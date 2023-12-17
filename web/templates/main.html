@@ -1,0 +1,57 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/main.css">
+    <title>Fortress of Zeus</title>
+</head>
+
+<body>
+    <header>
+        <h1>Fortress of Zeus</h1>
+    </header>
+
+    <section id="app-codes">
+        <ul>
+            {% for app in app_codes %}
+                <li>
+                    <span class="app-name">{{ app.name }}</span>
+                    <span class="app-code">{{ app.code }}</span>
+                    <div class="progress-bar" id="progress-bar-{{ appId }}"></div>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- ... (remaining HTML code) ... -->
+
+    <script>
+        function updateAppCodes() {
+            const progressBarElements = document.querySelectorAll('.progress-bar');
+
+            progressBarElements.forEach((progressBar, index) => {
+                // Calculate progress based on remaining time (adjust as needed)
+                const remainingTime = app_codes[index].remaining_time;
+                const totalTime = 10 * 1000; // 10 seconds in milliseconds
+                const progress = (remainingTime / totalTime) * 100;
+
+                // Update progress bar width
+                progressBar.style.width = `${progress}%`;
+
+                // Check if progress is 0%, then refresh the page
+                if (progress === 0) {
+                    location.reload();
+                }
+            });
+        }
+
+        // Update app codes and progress bars every second
+        setInterval(updateAppCodes, 1000);
+    </script>
+</body>
+
+</html>

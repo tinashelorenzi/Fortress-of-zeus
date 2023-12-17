@@ -1,0 +1,62 @@
+/*-- Main-Page-Styling --*/
+
+body {
+    background: url('../images/bg.png');
+    font-family: 'Oswald-Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #2D3134;
+    padding: 20px;
+}
+
+h1 {
+    color: #41F3BB;
+    font-size: 50px;
+    margin-top: 10px;
+    font-family: 'Bangers', sans-serif;
+}
+
+#app-codes {
+    margin: 20px auto;
+    width: 60%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #2D3134;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.app-name {
+    color: #41F3BB;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.app-code {
+    color: #C6CACD;
+    font-size: 18px;
+}
+
+.progress-bar {
+    background-color: #74797C;
+    height: 15px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*-- Main-Page-Styling --*/
