@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Techy Form</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00bfff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #00bfff;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #00bfff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0080ff;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/check" method="post">
+        <label for="code">Enter Code:</label>
+        <input type="text" id="code" name="code" required>
+
+        <button type="submit">Check</button>
+    </form>
+
+</body>
+</html>
